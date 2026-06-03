@@ -1,0 +1,10 @@
+# Binarios compilados
+/bin/
+
+# Dados gerados (arquivo grande, reproduzivel com 'make data')
+/data/
+
+# Resultados brutos de benchmark sao mantidos no repo (results/),
+# exceto eventuais saidas ordenadas grandes:
+*.out
+*.bin
