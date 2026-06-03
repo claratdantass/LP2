@@ -213,6 +213,4 @@ modo=paralelo threads=8 n=10000000 tempo=0.061501 s ordenado=SIM verificacao=OK
 
 ## Convenções de código
 
-- Identificadores em **inglês**, **snake_case**.
-- Comentários em **português**.
 - Número de threads nunca fixo: sempre passado como argumento de linha de comando.
