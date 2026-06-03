@@ -20,10 +20,12 @@ SVG_PATH = os.path.join(BASE, "results", "speedup.svg")
 
 
 def carregar():
-    """Agrupa os tempos por (modo, threads)."""
+    """Agrupa os tempos por (modo, threads), descartando a execucao 1 (aquecimento)."""
     tempos = defaultdict(list)
     with open(CSV_PATH, newline="") as f:
         for row in csv.DictReader(f):
+            if int(row["execucao"]) == 1:
+                continue  # descarta o primeiro run (warmup)
             chave = (row["modo"], int(row["threads"]))
             tempos[chave].append(float(row["tempo_s"]))
     return tempos

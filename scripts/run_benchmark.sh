@@ -15,7 +15,7 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.."
 
-REPS="${REPS:-5}"
+REPS="${REPS:-6}"   # 6 execucoes; a 1a eh descartada como aquecimento
 THREADS_LIST="${THREADS:-1 2 4 8}"
 INPUT="${INPUT:-data/input.bin}"
 OUT_DIR="results"
